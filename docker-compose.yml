@@ -1,24 +1,24 @@
 version: '1'
 services:
   web:
-    build: ./webapi
-    command: python3 manage.py runserver 0.0.0.0:8000
+    build: webapi
+    command: python3 manage.py runserver  0.0.0.0:8000
     volumes:
       - ./webapi/:/home/project/aswan/
     ports:
       - 8000:8000
     env_file:
       - .env
-    depends_on:
-      - db
-  db:
-    image: postgres:alpine
-    volumes:
-      - ./postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
+    # depends_on:
+    #   - db
+  # db:
+  #   image: postgres:alpine
+  #   volumes:
+  #     - ./postgres_data:/var/lib/postgresql/data/
+    # environment:
+    #   - POSTGRES_USER=${POSTGRES_USER}
+    #   - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    #   - POSTGRES_DB=${POSTGRES_DB}
 
-volumes:
-  postgres_data:
+# volumes:
+#   postgres_data:

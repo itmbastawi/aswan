@@ -8,3 +8,7 @@ Django REST API
 1. make
 1. Dockerfile
 1. docker-compose
+
+
+### setup
+git update-index --assume-unchanged .env
