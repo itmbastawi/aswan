@@ -1,7 +1,7 @@
 # Aswan project
 Django REST API 
 
-### structure
+## structure
 1. Django project
 1. requirements.txt
 1. env
@@ -10,5 +10,11 @@ Django REST API
 1. docker-compose
 
 
-### setup
+## Getting start
+1. clone git repository
+1. Edit .env file
+1. untrake ,env fiel 
+```
 git update-index --assume-unchanged .env
+
+```

@@ -17,9 +17,8 @@ RUN pip install --upgrade pip
 COPY requirements.txt /home/project/aswan/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-
-
 # copy project
 COPY . /home/project/aswan
+
 
 

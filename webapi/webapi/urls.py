@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mainapp import views as mainapp_views
 
-urlpatterns = [
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+
+urlpatterns = router.urls
+
+urlpatterns += [
     path('admin/', admin.site.urls),
+    path('contact/', mainapp_views.ContactAPIView.as_view()),
 ]
